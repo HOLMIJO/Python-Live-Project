@@ -1,7 +1,7 @@
 # Python Live Project
 
 ## Introduction
-For the last two weeks of my time at The Tech Academy, I worked to develop a Web Application in Python/Django focused on weather. It was a great learning opportunity for creating an application from scratch, while adding requested features. I worked on several back end stories that I am very proud of. Over the two week sprint I was exposed to many concepts and methods of programming that I'm confident I will use again and again on future projects.
+For two weeks of my time at The Tech Academy, I worked to develop a Web Application in Python/Django focused on weather. It was a great learning opportunity for creating an application from scratch, while adding requested features. I worked on several back end stories that I am very proud of. Over the two week sprint I was exposed to many concepts and methods of programming that I'm confident I will use again and again on future projects.
   
 Below are descriptions of some of the stories I worked on, along with code snippets.
 
@@ -103,4 +103,6 @@ In this function the user can click the link to the Weather API page. While the 
 
 ## Other Skills Learned
 * Learning from other developers and asking questions as needed.
-* Understanding the concepts and methodology for creating an application based on an idea, and being able to design a tangible application and product based on general instructions, and going to work to deliver the requirements according to the specifications given, and gaining acceptance by the Project Manager and Product Owner.
+* Understanding the concepts and methodology for creating an application based on an idea.
+* Being able to design a tangible application and product based on general instructions.
+* Working to work to deliver the requirements according to the specifications given, and gaining acceptance by the Project Manager and Product Owner.
