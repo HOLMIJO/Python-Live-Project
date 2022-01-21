@@ -44,20 +44,28 @@ In this function the user can click the desired user link on the User Database p
 ### Web Scraping Function
 In this function the user can click the link to the Weather Scraping page. The user is then brought to a page which automatically loads the daily weather forecast including the 7 Day outlook, currently programmed for West Memphis, Arkansas 72301. 
 
-    def weather_edit(request, pk):
-    edit = get_object_or_404(Users, pk=pk) # This will allow the user to edit details of the record
-    form = UsersForm(data=request.POST or None, instance=edit)
-    if request.method=='POST':
-        if form.is_valid(): # If the edited record is valid
-            form.save() # The edited information will be saved
-            return redirect('weather_home') # Upon saving the updated information user is redirected to the home page.
-        else:
-            print(form.errors) # If errors or incomplete record
-            form = UsersForm() # Return to form
-    context = {
-        'form': form, 'edit': edit
-    }
-    return render(request, 'WeatherBall/weatheredit.html', context)
+    def weather_scraping(request):
+    detailed_forecast = [] #Lists headers of forecast
+    weather_body = [] #Lists forecast text for each day
+    # The link below acquires info for West Memphis, Arkansas 72301
+    page = requests.get("https://forecast.weather.gov/MapClick.php?lat=35.3434&lon=-90.2983")
+    soup = BeautifulSoup(page.content, 'html.parser')
+    current = soup.find(id="detailed-forecast-body")
+    div_items = current.find_all("div")
+    for forecast in div_items:
+        bingo = forecast.find_all(class_="forecast-label") #This finds the day/night forecast period
+        for i in bingo:
+            text = i.get_text()
+            detailed_forecast.append(text)
+    for content in div_items:
+        clouds = content.find_all(class_="forecast-text") #This finds the details for the day/night forecast period
+        for rain in clouds:
+            message = rain.get_text()
+            weather_body.append(message)
+    print(detailed_forecast) #Prints forecast as dictionary pair to weatherscraping page
+    context = {'detailed_forecast': detailed_forecast, 'weather_body': weather_body}
+    return render(request, 'WeatherBall/weatherscraping.html', context)
+
 
 
 
