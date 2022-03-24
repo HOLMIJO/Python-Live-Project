@@ -1,7 +1,7 @@
 # Python Live Project
 
 ## Introduction
-For two weeks of my time at The Tech Academy, I worked to develop a Web Application in Python/Django focused on weather. It was a great learning opportunity for creating an application from scratch, while adding requested features. I worked on several back end stories that I am very proud of. Over the two week sprint I was exposed to many concepts and methods of programming that I'm confident I will use again and again on future projects.
+For this project, I worked to develop a Web Application in Python/Django focused on weather. It was a great learning opportunity for creating an application from scratch, while adding requested features. I worked on several back end stories that I am very proud of. Over the two week sprint I was exposed to many concepts and methods of programming that I'm confident I will use again and again on future projects.
   
 Below are descriptions of some of the stories I worked on, along with code snippets.
 
